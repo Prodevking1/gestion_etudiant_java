@@ -1,0 +1,77 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch AjouterNote",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.AjouterNote",
+            "projectName": "CollectionEtudiant _54c10ff0"
+        },
+        {
+            "type": "java",
+            "name": "Launch AjouterEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.AjouterEtudiant",
+            "projectName": "CollectionEtudiant _54c10ff0"
+        },
+        {
+            "type": "java",
+            "name": "Launch EtudiantHelper",
+            "request": "launch",
+            "mainClass": "collectionetudiant.helpers.EtudiantHelper",
+            "projectName": "CollectionEtudiant _54c10ff0"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreAdmis",
+            "request": "launch",
+            "mainClass": "collectionetudiant.FenetreAdmis",
+            "projectName": "CollectionEtudiant_e9f5b630"
+        },
+        {
+            "type": "java",
+            "name": "Launch NotesFenetre",
+            "request": "launch",
+            "mainClass": "collectionetudiant.NotesFenetre",
+            "projectName": "CollectionEtudiant_e9f5b630"
+        },
+        {
+            "type": "java",
+            "name": "Launch formEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.formEtudiant",
+            "projectName": "CollectionEtudiant_e9f5b630"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreGlobale",
+            "request": "launch",
+            "mainClass": "collectionetudiant.FenetreGlobale",
+            "projectName": "CollectionEtudiant_e9f5b630"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch CollectionEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.CollectionEtudiant",
+            "projectName": "CollectionEtudiant_e9f5b630"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConnexionEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.ConnexionEtudiant",
+            "projectName": "CollectionEtudiant_e9f5b630"
+        }
+    ]
+}
