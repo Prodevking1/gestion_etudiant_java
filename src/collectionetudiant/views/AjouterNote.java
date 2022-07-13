@@ -138,7 +138,8 @@ public class AjouterNote extends Frame {
     }
     public Note newNote() {
         Note note = new Note();
-        note.setcode(matiere.getText());
+        note.setcode(matricule.getText());
+        note.setMatiere(matiere.getText());
         note.setValeur(Integer.parseInt(valeur.getText()));
         note.setAppreciation(appreciation.getText());
         note.setDateEval(dateEval.getText());

@@ -12,13 +12,15 @@ package collectionetudiant.models;
  */
 public class Note {
     private String code;
+    private String matiere;
     private double valeur;
     private String dateEval;
     private String appreciation;
     private String session;
 
-    public Note(String code, double valeur, String dateEval, String appreciation, String session) {
+    public Note(String code, String matiere, double valeur, String dateEval, String appreciation, String session) {
         this.code = code;
+        this.matiere = matiere;
         this.valeur = valeur;
         this.dateEval = dateEval;
         this.appreciation = appreciation;
@@ -92,6 +94,22 @@ public class Note {
     }
 
   
+
+    public String getCode() {
+        return this.code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMatiere() {
+        return this.matiere;
+    }
+
+    public void setMatiere(String matiere) {
+        this.matiere = matiere;
+    }
 
     
 

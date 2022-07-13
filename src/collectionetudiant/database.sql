@@ -14,9 +14,11 @@ create table etudiants{
 create table notes(
 };
 
-create table notes{
-    valeur int not null,
-    dateEval date not null,
+create table notes(
+    code varchar(255) primary key,
+    matiere varchar(255) not null,
+    valeur int(255) not null,
+    dateEval varchar(255) not null,
     appreciation varchar(255) not null,
     session_Note varchar(255) not null
 );
