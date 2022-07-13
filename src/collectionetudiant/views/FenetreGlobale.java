@@ -24,12 +24,13 @@ public class FenetreGlobale extends Frame {
 		setBounds(100, 100, 800, 480); // x,y,width,height
 
 		// Buttons Panel
+                
 		Button bEtudiant = new Button("Creer un etudiant");
 		// bEtudiant.addActionListener(new Etudiant()); //Enregistrement de l'écouteur
 		bEtudiant.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// On peut éventuellement passé en paramèttre Fenetre.this à la nouvelle fenêtre
-				AjouterEtudiant form = new AjouterEtudiant();
+				MyApp form = new MyApp();
 				// form.formEtudiant();
 				// JFrame frame3 = new JFrame("niveau 2");
 				form.setVisible(true);
