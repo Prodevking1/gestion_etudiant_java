@@ -4,6 +4,7 @@ import java.awt.*;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
@@ -56,9 +57,16 @@ public class FenetreGlobale extends Frame {
 		bAdmis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				/* FenetreAdmis.calculMoyenne(1); */
-				FenetreAdmis admis = new FenetreAdmis();
-				admis.setVisible(true);
-				FenetreGlobale.this.setVisible(false);
+				FenetreAdmis admis;
+				try {
+					admis = new FenetreAdmis();
+					admis.setVisible(true);
+					FenetreGlobale.this.setVisible(false);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
 			}
 		});
 		Button bDeliberation = new Button("Deliberation Generale");

@@ -242,12 +242,12 @@ class MyApp extends Frame {
 
 	public Etudiant newEtudiant() {
 		Etudiant etudiant = new Etudiant();
-		etudiant.setMatricule(lblMatricule.getText());
-		etudiant.setNom(lblName.getText());
-		etudiant.setPrenom(lblFather.getText());
-		etudiant.setEmail(lblemail.getText());
-		etudiant.setLieu_naiss(lbllieu.getText());
-		etudiant.setDte_naiss(lblAge.getText());
+		etudiant.setMatricule(txtMatricule.getText());
+		etudiant.setNom(txtName.getText());
+		etudiant.setPrenom(txtFather.getText());
+		etudiant.setEmail(txtemail.getText());
+		etudiant.setLieu_naiss(txtlieu.getText());
+		etudiant.setDte_naiss(txtAge.getText());
 		return etudiant;
 
 	}
@@ -262,6 +262,9 @@ class MyApp extends Frame {
 public class AjouterEtudiant {
 	public static void main(String[] args) {
 		MyApp frm = new MyApp();
+	}
+
+	public void setVisible(boolean b) {
 	}
  
 }

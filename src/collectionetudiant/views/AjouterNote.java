@@ -155,14 +155,14 @@ class AjouterNote extends Frame {
                 
                 setVisible(true);
 
-		btnSave.addActionListener(new ActionListener() {
+		/* btnSave.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent ev) {
             try {
                 NoteHelper.ajouterNote(newNote());
                 JOptionPane.showMessageDialog(frame,
-                        "Notes ajoutees pour le matricule: " + lblMatricule.getText(),
+                        "Notes ajoutees pour le matricule: " + txtMatricule.getText(),
                         "Success",
 
                         JOptionPane.OK_OPTION);
@@ -181,17 +181,42 @@ class AjouterNote extends Frame {
             }
             
         }
-    }
+    } */
+		btnSave.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ev) {
+				try {
+					NoteHelper.ajouterNote(newNote());
+					JOptionPane.showMessageDialog(frame,
+							"Notes ajoutees pour le matricule: " + txtMatricule.getText(),
+							"Success",
+
+							JOptionPane.OK_OPTION);
+					FenetreGlobale fenetre = new FenetreGlobale();
+					fenetre.setVisible(true);
+					AjouterNote.this.setVisible(false);
+					AjouterEtudiant formEtu = new AjouterEtudiant();
+					formEtu.setVisible(true);
+					AjouterNote.this.setVisible(false);
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(frame,
+							"Ajout impossible",
+							"Erreur",
+							JOptionPane.ERROR_MESSAGE);
+				}
+
+			}
+		}
     );
     
     }
     public Note newNote() {
         Note note = new Note();
-        note.setcode(lblMatiere.getText());
-        note.setValeur(Integer.parseInt(lblmoyenne.getText()));
-        note.setAppreciation(lblapp.getText());
-        note.setDateEval(lbldate.getText());
-        note.setSession(lblsess.getText());
+        note.setcode(txtMatiere.getText());
+        note.setValeur(Integer.parseInt(txtmoyenne.getText()));
+        note.setAppreciation(txtapp.getText());
+        note.setDateEval(txtdate.getText());
+        note.setSession(txtsess.getText());
         return note;
     }
     public static void main(String[] args) {

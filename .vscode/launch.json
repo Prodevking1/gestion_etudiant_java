@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CollectionEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.CollectionEtudiant",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch AjouterEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.AjouterEtudiant",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreAdmis",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.FenetreAdmis",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch AjouterNote",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.AjouterNote",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreGlobale",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.FenetreGlobale",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
             "name": "Launch AjouterNote",
             "request": "launch",
             "mainClass": "collectionetudiant.views.AjouterNote",
