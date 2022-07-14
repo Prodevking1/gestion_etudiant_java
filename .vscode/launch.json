@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ListeEtudiant",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.ListeEtudiant",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch NonAdmis",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.NonAdmis",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch Admis",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.Admis",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
+            "name": "Launch FenetreNonAdmis",
+            "request": "launch",
+            "mainClass": "collectionetudiant.views.FenetreNonAdmis",
+            "projectName": "CollectionEtudiant  copy_b00d05a5"
+        },
+        {
+            "type": "java",
             "name": "Launch CollectionEtudiant",
             "request": "launch",
             "mainClass": "collectionetudiant.CollectionEtudiant",

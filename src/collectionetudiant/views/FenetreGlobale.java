@@ -26,7 +26,7 @@ public class FenetreGlobale extends Frame {
 
 		// Buttons Panel
                 
-		Button bEtudiant = new Button("Creer un etudiant");
+		Button bEtudiant = new Button("Ajouter un etudiant");
 		// bEtudiant.addActionListener(new Etudiant()); //Enregistrement de l'écouteur
 		bEtudiant.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -53,28 +53,45 @@ public class FenetreGlobale extends Frame {
 				FenetreGlobale.this.setVisible(false);
 			}
 		});
-		Button bAdmis = new Button("Liste des admins");
+		Button bAdmis = new Button("Liste des admis");
 		bAdmis.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
-				/* FenetreAdmis.calculMoyenne(1); */
-				FenetreAdmis admis;
-				try {
-					admis = new FenetreAdmis();
-					admis.setVisible(true);
-					FenetreGlobale.this.setVisible(false);
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				/* Admis.calculMoyenne(1); */
+				Admis admis;
+				admis = new Admis();
+				admis.setVisible(true);
+				FenetreGlobale.this.setVisible(false);
 				
 			}
 		});
+		Button bNonAdmis = new Button("Liste des Ajournees");
+		bNonAdmis.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ev) {
+				/* Admis.calculMoyenne(1); */
+				NonAdmis nonadmis;
+				nonadmis = new NonAdmis();
+				nonadmis.setVisible(true);
+				FenetreGlobale.this.setVisible(false);
+
+			}
+		});
 		Button bDeliberation = new Button("Deliberation Generale");
+		bDeliberation.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ev) {
+				/* Admis.calculMoyenne(1); */
+				ListeEtudiant listeEtudiant;
+				listeEtudiant = new ListeEtudiant();
+				listeEtudiant.setVisible(true);
+				FenetreGlobale.this.setVisible(false);
+
+			}
+		});
 		/* bExit.addActionListener(new evenementunboutonpourtous()); */
 		Panel bPanel = new Panel(new GridLayout(1, 0, 5, 5));
 		bPanel.add(bEtudiant);
 		bPanel.add(bNotes);
 		bPanel.add(bAdmis);
+		bPanel.add(bNonAdmis);
 		bPanel.add(bDeliberation);
 
 		/*

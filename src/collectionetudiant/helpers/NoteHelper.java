@@ -5,6 +5,7 @@ import collectionetudiant.models.*;
 
 public class NoteHelper {
     public static void ajouterNote(Note note) throws Exception {
+
         /*
          * String query =
          * "INSERT INTO etudiants(code, matiere, valeur, dateEval, appreciation	, session_Note) values("

@@ -31,6 +31,8 @@ class MyApp extends Frame {
 	Label lblTitle,lblName,lblFather,lblAge,lbllieu,lblGender,lblCourse,lblHobbies,lblMatricule,lblemail,lblAddress;
 	TextField txtName,txtFather,txtAge,txtemail,txtMatricule,txtlieu;
 	TextArea txtAddress;
+	private Choice genre;
+
 	Checkbox checkMale, checkFemale,Hobbies1,Hobbies2,Hobbies3,Hobbies4;
 	CheckboxGroup cbg;
 	Choice Course;
@@ -93,7 +95,7 @@ class MyApp extends Frame {
 		lblemail.setForeground(Color.WHITE);
 		add(lblemail);
                 txtemail=new TextField();
-		txtemail.setBounds(400,250,500,30);
+		txtemail.setBounds(400,250,400,30);
 		txtemail.setFont(textFont);
 		add(txtemail);
  
@@ -104,7 +106,7 @@ class MyApp extends Frame {
 		add(lblAge);
  
 		txtAge=new TextField();
-		txtAge.setBounds(400,300,500,30);
+		txtAge.setBounds(400,300,400,30);
 		txtAge.setFont(textFont);
 		add(txtAge);
                 
@@ -115,7 +117,7 @@ class MyApp extends Frame {
 		add(lbllieu);
  
 		txtlieu=new TextField();
-		txtlieu.setBounds(400,350,500,30);
+		txtlieu.setBounds(400,350,400,30);
 		txtlieu.setFont(textFont);
 		add(txtlieu);
  
@@ -139,6 +141,7 @@ class MyApp extends Frame {
 		checkFemale.setFont(labelFont);
 		checkFemale.setForeground(Color.WHITE);
 		add(checkFemale);
+		
  
 		
 		btnSave=new Button("Ajoutez");
@@ -196,9 +199,9 @@ class MyApp extends Frame {
 							"",
 							
 							JOptionPane.PLAIN_MESSAGE);
-							FenetreGlobale fenetre = new FenetreGlobale();
+							/* FenetreGlobale fenetre = new FenetreGlobale();
 							fenetre.setVisible(true);
-							MyApp.this.setVisible(false);
+							MyApp.this.setVisible(false); */
 
 				}catch(Exception e){
 					JOptionPane.showMessageDialog(frame,
@@ -229,6 +232,15 @@ class MyApp extends Frame {
 				}
 			}
 		});
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ev) {
+				/* Admis.calculMoyenne(1); */
+				FenetreGlobale home = new FenetreGlobale();
+				home.setVisible(true);
+				MyApp.this.setVisible(false);
+
+			}
+		});
 	};
 
 	/*
@@ -248,10 +260,10 @@ class MyApp extends Frame {
 		etudiant.setEmail(txtemail.getText());
 		etudiant.setLieu_naiss(txtlieu.getText());
 		etudiant.setDte_naiss(txtAge.getText());
+		etudiant.setGenre(lblGender.getText());
 		return etudiant;
 
 	}
-
 
 }
 

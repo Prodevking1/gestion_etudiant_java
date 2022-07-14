@@ -30,6 +30,9 @@ class AjouterNote extends Frame {
 	TextArea txtAddress;
 	Button btnSave,btnClear,btnExit;
  
+	/**
+	 * 
+	 */
 	public AjouterNote() {
 		super("Ajouts Notes");
 		setSize(1000, 600);// w,h
@@ -98,7 +101,7 @@ class AjouterNote extends Frame {
 		lblapp.setForeground(Color.WHITE);
 		add(lblapp);
                 txtapp=new TextField();
-		txtapp.setBounds(400,300,500,30);
+		txtapp.setBounds(400,300,400,30);
 		txtapp.setFont(textFont);
 		add(txtapp);
  
@@ -109,7 +112,7 @@ class AjouterNote extends Frame {
 		add(lblsess);
  
 		txtsess=new TextField();
-		txtsess.setBounds(400,350,500,30);
+		txtsess.setBounds(400,350,400,30);
 		txtsess.setFont(textFont);
 		add(txtsess);
  
@@ -192,33 +195,60 @@ class AjouterNote extends Frame {
 							"Success",
 
 							JOptionPane.OK_OPTION);
-					FenetreGlobale fenetre = new FenetreGlobale();
-					fenetre.setVisible(true);
-					AjouterNote.this.setVisible(false);
-					AjouterEtudiant formEtu = new AjouterEtudiant();
-					formEtu.setVisible(true);
-					AjouterNote.this.setVisible(false);
+					/* FenetreGlobale fenetre = new FenetreGlobale();
+					fenetre.setVisible(true); */
+					AjouterNote.this.setVisible(true);
 				} catch (Exception e) {
 					JOptionPane.showMessageDialog(frame,
 							"Ajout impossible",
 							"Erreur",
 							JOptionPane.ERROR_MESSAGE);
 				}
+			}
+			
+		});
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent ev) {
+				/* Admis.calculMoyenne(1); */
+				FenetreGlobale home = new FenetreGlobale();
+				home.setVisible(true);
+				AjouterNote.this.setVisible(false);
 
 			}
-		}
-    );
+		});
+		btnClear.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent ev) {
+
+				try {
+					txtMatricule.setText("");
+					txtMatiere.setText("");
+					txtmoyenne.setText("");
+					txtdate.setText("");
+					txtapp.setText("");
+					txtsess.setText("");
+					
+
+				} catch (Exception e) {
+					System.out.println("Une erreur s'est produite");
+				}
+			}
+		});
+    
     
     }
-    public Note newNote() {
-        Note note = new Note();
-        note.setcode(txtMatiere.getText());
-        note.setValeur(Integer.parseInt(txtmoyenne.getText()));
-        note.setAppreciation(txtapp.getText());
-        note.setDateEval(txtdate.getText());
-        note.setSession(txtsess.getText());
-        return note;
-    }
+    
+	public Note newNote() {
+		Note note = new Note();
+		note.setcode(txtMatricule.getText());
+		note.setMatiere(txtMatiere.getText());
+		note.setValeur(Integer.parseInt(txtmoyenne.getText()));
+		note.setAppreciation(txtapp.getText());
+		note.setDateEval(txtdate.getText());
+		note.setSession(txtsess.getText());
+		return note;
+	}
     public static void main(String[] args) {
        new AjouterNote();
     }
